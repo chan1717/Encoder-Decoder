@@ -8,6 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
+            color: #333;
             padding: 20px;
         }
         h1 {
@@ -33,16 +34,53 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #0056b3;
         }
+
+        /* Output Box without color */
         #output {
             margin-top: 20px;
-            padding: 10px;
+            padding: 20px;
             background-color: #f9f9f9;
             border: 1px solid #ccc;
+            border-radius: 10px;
             white-space: pre-wrap;
+            word-wrap: break-word; /* Ensures long words or lines break */
+            overflow: auto; /* Adds a scrollbar if content overflows */
+        }
+
+        /* Dark mode styles */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #f0f0f0;
+            }
+            .container {
+                background-color: #1e1e1e;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            }
+            h1 {
+                color: #ffffff;
+            }
+            textarea {
+                background-color: #333;
+                color: #f0f0f0;
+                border: 1px solid #555;
+            }
+            button {
+                background-color: #1a73e8;
+            }
+            button:hover {
+                background-color: #1669c7;
+            }
+            #output {
+                background-color: #2c2c2c;
+                border: 1px solid #555;
+                color: #9ecfff;
+            }
         }
     </style>
 </head>
